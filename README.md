@@ -20,6 +20,7 @@ npm run start
 
 Third, run a db server fake:
 ```
+// in the server folder run:
 json-server db.json --port 5000
 ```
 
