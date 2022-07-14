@@ -1,26 +1,10 @@
 import React, { useEffect, useRef, useState, CSSProperties } from "react";
 import { useDrop, useDrag, DragSourceMonitor } from "react-dnd";
 import { CardTag } from "./Card.styles";
-import { throttle } from "throttle-debounce-ts";
 import { useDispatch } from "react-redux";
 import { MoveTaskAction } from "../../../../actions/index";
 import { DndTaskType } from "../../../../interfaces";
 import { getEmptyImage } from "react-dnd-html5-backend";
-
-function getStyles(
-  left: number,
-  top: number,
-  isDragging: boolean
-): CSSProperties {
-  const transform = `translate3d(${left}px, ${top}px, 0)`;
-  return {
-    position: isDragging ? "absolute" : "relative",
-    transform,
-    WebkitTransform: transform,
-    opacity: isDragging ? 0 : 1,
-    height: isDragging ? 0 : "",
-  };
-}
 
 const Card = ({
   task,
@@ -48,7 +32,6 @@ const Card = ({
 
   useEffect(() => {
     if (isDragging) {
-      console.log("t", task);
       MoveTaskAction(
         {
           listIdOnDrag: "",

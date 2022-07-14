@@ -5,7 +5,7 @@
       "title": "Web Cuentos de terror",
       "tasks": [
         "babel 2",
-        "Tarea 3"
+        "styling header"
       ]
     },
     {
@@ -13,7 +13,9 @@
       "title": "Ecommerce en next",
       "tasks": [
         "styling header",
-        "El cuervo"
+        "El cuervo",
+        "static typing",
+        "otra task"
       ]
     },
     {
@@ -22,15 +24,14 @@
       "tasks": [
         "babel",
         "Perro",
-        "static typing"
+        "Tarea 3"
       ]
     },
     {
       "id": 3,
       "title": "Config Platform",
       "tasks": [
-        "Pet cementery",
-        "styling header"
+        "Pet cementery"
       ]
     },
     {
