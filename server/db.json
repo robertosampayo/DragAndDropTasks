@@ -1,0 +1,97 @@
+{
+  "lists": [
+    {
+      "id": 0,
+      "title": "Web Cuentos de terror",
+      "tasks": [
+        "babel 2",
+        "Tarea 3"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Ecommerce en next",
+      "tasks": [
+        "styling header",
+        "El cuervo"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Config Next",
+      "tasks": [
+        "babel",
+        "Perro",
+        "static typing"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Config Platform",
+      "tasks": [
+        "Pet cementery",
+        "styling header"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Write Db Arquitechture",
+      "tasks": [
+        "Otra tarea"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Nueva lista2",
+      "tasks": []
+    },
+    {
+      "title": "Lista de animes",
+      "tasks": [
+        "Uzumaki",
+        "Dragon ball",
+        "Add webpack config",
+        "One piece"
+      ],
+      "id": 6
+    },
+    {
+      "title": "Lista de animes",
+      "tasks": [
+        "Otra task",
+        "Pokemon",
+        "Sakura"
+      ],
+      "id": 7
+    },
+    {
+      "title": "Lista de animes",
+      "tasks": [
+        "one piece",
+        "Otra task again",
+        "Bola"
+      ],
+      "id": 8
+    },
+    {
+      "title": "Lista nueva de cocina",
+      "tasks": [],
+      "id": 9
+    },
+    {
+      "title": "Lista para comprar herramientas",
+      "tasks": [],
+      "id": 10
+    },
+    {
+      "title": "Lista para comprar herramientas de todo tipo de cosas",
+      "tasks": [],
+      "id": 11
+    },
+    {
+      "title": "nuevas series",
+      "tasks": [],
+      "id": 12
+    }
+  ]
+}

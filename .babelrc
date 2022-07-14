@@ -1,0 +1,28 @@
+{
+    "env": {
+      "development": {
+        "presets": ["next/babel"],
+        "plugins": ["styled-components"]
+      },
+      "production": {
+        "presets": ["next/babel"],
+        "plugins": ["styled-components"]
+      },
+      "test": {
+        "presets": [
+          "env",
+          "react",
+          [
+            "next/babel",
+            {
+              "styled-jsx": {
+                "babel-test": true
+              }
+            }
+          ]
+        ],
+        "plugins": ["styled-components"]
+      }
+    }
+  }
+  

@@ -1,0 +1,45 @@
+{
+    "body": [
+       { 
+            "title": "Web Cuentos de terror",
+            "tasks": [
+            { "id": 0, "task": "add color to palette" },
+            { "id": 1, "task": "styling header" }
+            ]
+        },
+        {
+            "title": "Ecommerce en next",
+            "tasks": [
+                { "id": 0, "task": "static typing" },
+                { "id": 1, "task": "styling header" }
+            ]
+        },
+
+        {
+            "title": "Config Next",
+            "tasks": [
+                { "id": 0, "task": "static typing" },
+                { "id": 1, "task": "styling header" }
+            ]
+        },
+
+        {
+            "title": "Config Platform",
+            "tasks": [
+                { "id": 0, "task": "static typing" },
+                { "id": 1, "task": "styling header" }
+            ]
+        },
+
+        {
+            "title": "Write Db Arquitechture",
+            "tasks": [
+                { "id": 0, "task": "static typing" },
+                { "id": 1, "task": "styling header" }
+            ]
+        }
+    ]
+
+
+
+}
