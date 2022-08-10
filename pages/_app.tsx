@@ -7,7 +7,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: "http://localhost:4000/api/graphql/",
   cache: new InMemoryCache(),
 });
 

@@ -1,7 +1,7 @@
 export const DndTaskType = 'task';
 
 export interface IList {
-    id: string,
+    _id: string,
     tasks: string[],
     title: string,
 }

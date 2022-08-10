@@ -37,7 +37,7 @@ const ColumnContainer = ({ list, onAddNewCard }: ColumnContainerProps) => {
 
   function moveTask(item: IDnDTask) {
     const listIdFrom = item.listId;
-    const listIdTo = list.id;
+    const listIdTo = list._id;
 
     if (listIdFrom !== listIdTo) {
       removeCard(String(taskMoving), listIdFrom);
@@ -54,13 +54,13 @@ const ColumnContainer = ({ list, onAddNewCard }: ColumnContainerProps) => {
   }
 
   const handleAddNewCard = (title: string) => {
-    onAddNewCard(title, list.id);
+    onAddNewCard(title, list._id);
   };
 
   drop(ref);
 
   return (
-    <Container ref={ref} key={list.id}>
+    <Container ref={ref} key={list._id}>
       <Title>{list.title}</Title>
       <CardUl>
         {list && list?.tasks
@@ -69,7 +69,7 @@ const ColumnContainer = ({ list, onAddNewCard }: ColumnContainerProps) => {
                 key={index}
                 id={String(index)}
                 task={task}
-                listId={list.id}
+                listId={list._id}
               />
             ))
           : null}

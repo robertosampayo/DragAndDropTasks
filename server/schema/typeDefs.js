@@ -1,10 +1,10 @@
-const { gql } = require("apollo-server");
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
 
 
   type List {
-    id: ID
+    _id: ID
     title: String!
     tasks: [String!]
 
@@ -40,4 +40,4 @@ const typeDefs = gql`
 
 `;
 
-module.exports = { typeDefs };
+module.exports = typeDefs;

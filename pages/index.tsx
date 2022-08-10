@@ -15,25 +15,10 @@ import CardPreview from "./components/ColumnContainer/Card/CardPreview.styles";
 const GET_LISTS = gql`
   query GetLists {
     lists {
-      id
+      _id
       title
       tasks
     }
-  }
-`;
-
-const SAVE_LIST = gql`
-  mutation CreateList($input: CreateListInput!) {
-    createList(input: $input) {
-      title
-      tasks
-    }
-  }
-`;
-
-const SAVE_TASK = gql`
-  mutation CreateTask($createTaskInput: CreateTask!) {
-    createTask(input: $createTaskInput)
   }
 `;
 
@@ -75,7 +60,7 @@ const Home: NextPage = () => {
             {data && !loading
               ? data.lists.map((list) => (
                   <ColumnContainer
-                    key={list.id}
+                    key={list._id}
                     list={list}
                     onAddNewCard={addNewCard}
                   />

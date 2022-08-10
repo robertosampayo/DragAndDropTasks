@@ -1,33 +1,18 @@
 import { ISaveList, IListsState, IMoveTask } from '../interfaces' 
 import { Dispatch } from 'react';
 import { AnyAction } from 'redux';
-import { useQuery, gql, useMutation } from "@apollo/client";
-import { IList } from "../interfaces";
+import { gql } from "@apollo/client";
 
 export const GET_LISTS_GQL = gql`
   query GetLists {
     lists {
-      id
+      _id
       title
       tasks
     }
   }
 `;
 
-const SAVE_LIST_GQL = gql`
-  mutation CreateList($input: CreateListInput!) {
-    createList(input: $input) {
-      title
-      tasks
-    }
-  }
-`;
-
-const SAVE_TASK_GQL = gql`
-  mutation CreateTask($createTaskInput: CreateTask!) {
-    createTask(input: $createTaskInput)
-  }
-`;
 
 
 export const SAVE_LIST = 'SAVE_LIST';

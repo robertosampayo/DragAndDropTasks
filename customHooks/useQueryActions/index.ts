@@ -1,11 +1,11 @@
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { gql, useMutation } from "@apollo/client";
 import { IList } from "../../interfaces";
 
 
 export const GET_LISTS_GQL = gql`
   query GetLists {
     lists {
-      id
+      _id
       title
       tasks
     }
@@ -42,7 +42,7 @@ const useQueryActions = () => {
         { query: GET_LISTS_GQL },
         ],
     });
-    const [createTask] = useMutation<String[]>(SAVE_TASK_GQL, {
+    const [createTask,] = useMutation<String[]>(SAVE_TASK_GQL, {
         refetchQueries: [
         { query: GET_LISTS_GQL },
         ],
@@ -58,10 +58,15 @@ const useQueryActions = () => {
         createList({ variables: { input: { title: title, tasks: [] } } });
     };
 
-    const addNewCard = (title: string, listId: string) => {
-        createTask({
+    const addNewCard = async (title: string, listId: string) => {
+      try {
+
+        await createTask({
           variables: { createTaskInput: { task: title, idList: listId } },
         });
+      } catch (error) {
+        console.error(error);
+      }
     };
 
     const removeCard = (task: string, listId: string) => {

@@ -34,16 +34,15 @@ const resolvers = {
         const task = args.input.task
 
         if (listId && task) {
-
           const oldList = await clientAxios.get(`/lists/${listId}`).then(res => res.data);
   
           if (oldList && oldList.tasks && oldList.tasks.length > 0) {
   
-            const newTask = await clientAxios.patch(`/lists/${listId}`, { tasks: Array.from(new Set([ ... oldList.tasks, task ])) }).then(res => res.data.tasks);
-            return newTask;
+            const newTasks = await clientAxios.patch(`/lists/${listId}`, { tasks: Array.from(new Set([ ... oldList.tasks, task ])) }).then(res => res.data.tasks);
+            return newTasks;
           } else {
-            const newTask = await clientAxios.patch(`/lists/${listId}`, { tasks: [ task ] }).then(res => res.data.tasks);
-            return newTask;
+            const newTasks = await clientAxios.patch(`/lists/${listId}`, { tasks: [ task ] }).then(res => res.data.tasks);
+            return newTasks;
           }
 
 
@@ -76,4 +75,4 @@ const resolvers = {
 
 };
 
-module.exports = { resolvers };
+module.exports = resolvers;
