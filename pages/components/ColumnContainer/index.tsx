@@ -47,7 +47,7 @@ const ColumnContainer = ({
     );
   }
 
-  const [drop]: any = useDrop(
+  const [, drop]: any = useDrop(
     () => ({
       accept: DndTaskType,
       drop: (item: IDnDTask) => moveTask(item),
