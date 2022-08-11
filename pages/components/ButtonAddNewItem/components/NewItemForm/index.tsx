@@ -1,18 +1,21 @@
-import { useState, ChangeEvent, useEffect, useRef } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import {
-  Section,
-  FormInput,
   Button,
   ButtonsContainer,
-} from "./NewItemForm.style";
+  FormInput,
+  Section,
+} from './NewItemForm.style';
 
 interface CreateColumnFormProps {
   onSubmit: (title: string) => void;
   onCancel: () => void;
 }
 
-const NewItemForm = ({ onSubmit, onCancel }: CreateColumnFormProps) => {
-  const [columnTitle, setColumnTitle] = useState<string>("");
+const NewItemForm = ({
+  onSubmit,
+  onCancel,
+}: CreateColumnFormProps) => {
+  const [columnTitle, setColumnTitle] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {

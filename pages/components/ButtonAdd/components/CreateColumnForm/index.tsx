@@ -1,12 +1,16 @@
-import { useState, ChangeEvent } from "react";
-import { Section, FormInput, CreateButton } from "./CreateColumnForm.styles";
+import { ChangeEvent, useState } from 'react';
+import {
+  CreateButton,
+  FormInput,
+  Section,
+} from './CreateColumnForm.styles';
 
 interface CreateColumnFormProps {
   onSubmit: () => void;
 }
 
 const CreateColumnForm = ({ onSubmit }: CreateColumnFormProps) => {
-  const [columnTitle, setColumnTitle] = useState<string>("");
+  const [columnTitle, setColumnTitle] = useState<string>('');
 
   return (
     <Section>

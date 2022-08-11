@@ -35,7 +35,7 @@ export const FormInput = styled.input`
 `
 export const Button = styled.button<IButton>`
 
-    background: ${(props) => props.create ? '#26b226' : 'gray'};
+    background: ${(props) => props.create === true ? '#26b226' : 'gray'};
     border: 0;
     border-radius: 0.3em;
     height: 2em;

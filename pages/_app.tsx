@@ -1,13 +1,17 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { Provider } from "react-redux";
-import store from "../store";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+} from '@apollo/client';
+import type { AppProps } from 'next/app';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { Provider } from 'react-redux';
+import store from '../store';
+import '../styles/globals.css';
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/api/graphql/",
+  uri: 'http://localhost:4000/api/graphql/',
   cache: new InMemoryCache(),
 });
 

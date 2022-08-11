@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState, CSSProperties } from "react";
-import { useDrop, useDrag, DragSourceMonitor } from "react-dnd";
-import { CardTag } from "./Card.styles";
-import { useDispatch } from "react-redux";
-import { MoveTaskAction } from "../../../../actions/index";
-import { DndTaskType } from "../../../../interfaces";
-import { getEmptyImage } from "react-dnd-html5-backend";
+import React, { useEffect, useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import { getEmptyImage } from 'react-dnd-html5-backend';
+import { useDispatch } from 'react-redux';
+import { MoveTaskAction } from '../../../../actions/index';
+import { DndTaskType } from '../../../../interfaces';
+import { CardTag } from './Card.styles';
 
 const Card = ({
   task,
@@ -23,7 +23,7 @@ const Card = ({
   }));
 
   const [{ isDragging }, drag, preview] = useDrag(() => ({
-    type: "task",
+    type: 'task',
     item: { task: task, listId: listId },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
@@ -34,8 +34,8 @@ const Card = ({
     if (isDragging) {
       MoveTaskAction(
         {
-          listIdOnDrag: "",
-          listIdOnHover: "",
+          listIdOnDrag: '',
+          listIdOnHover: '',
           task: task,
         },
         dispatch
@@ -55,7 +55,7 @@ const Card = ({
         ref={ref}
         style={{
           opacity: isDragging ? 0 : 1,
-          cursor: "move",
+          cursor: 'move',
         }}
         key={`${task}-${id}`}
       >

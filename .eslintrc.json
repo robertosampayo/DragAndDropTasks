@@ -1,29 +1,111 @@
 {
-  "extends": "bragi",
+  "extends": [
+    
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
+  
+  ],
   "env": {
     "jest": true
   },
+  "ignorePatterns": ["*.spec.js", "*.test.js", "*.test.ts", ".eslintrc.js", "axios/**", "axios/**", "next.config.js", "jest.config.js", "jest.setup.js"],
+  
   "rules": {
-    "array-callback-return": 0,
-    "react/forbid-prop-types": 0,
-    "radix": 0,
-    "no-return-assign": 0,
-    "consistent-return": 0,
-    "no-undef": 0,
-    "react-hooks/rules-of-hooks": 0,
-    "react/no-children-prop": 0,
-    "template-curly-spacing" : 0,
-    "indent" : 0,
+    "no-var": "warn",
+    "no-console": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-extra-boolean-cast": "error",
+    "no-func-assign": "error",
+    "no-import-assign": "error",
+    "prefer-destructuring": [2, { "array": false, "object": true }],
+    "no-mixed-operators": ["error", {
+      "groups": [
+        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+        ["&&", "||"],
+        ["in", "instanceof"]
+      ],
+      "allowSamePrecedence": true
+    }],
+    "no-unsafe-negation": "error",
+    "no-unused-expressions": ["error", {
+      "allowShortCircuit": true,
+      "allowTernary": true,
+      "allowTaggedTemplates": true
+    }],
+    "no-unused-vars": ["error", {
+      "args": "none",
+      "caughtErrors": "none",
+      "ignoreRestSiblings": true,
+      "vars": "all"
+    }],
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "rest-spread-spacing": ["error", "never"],
+    "array-callback-return": "warn",
+    "no-return-assign": "warn",
+    "consistent-return": "warn",
+    "no-undef": "warn",
     "import/no-unresolved": "off",
     "react/destructuring-assignment": "off",
     "jsx-a11y/no-static-element-interactions": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"]
+      }
+    ],
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+          "allowString" : false,
+          "allowNumber" : false
+      }
+  ]
   },
+
+  "overrides": [
+		{
+			"parser": "@typescript-eslint/parser",
+			"plugins": ["@typescript-eslint"],
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				// not needed for typescript
+				"no-undef": 0,
+				// we need to use the no-unused-vars rule from ts.
+				"no-unused-vars": 0,
+				"@typescript-eslint/no-unused-vars": 2,
+				"no-use-before-define": 0,
+				"@typescript-eslint/no-use-before-define": 2,
+				"import/extensions": [
+					"error",
+					"ignorePackages",
+					{
+						"js": "never",
+						"mjs": "never",
+						"jsx": "never",
+						"ts": "never",
+						"tsx": "never"
+					}
+				],
+				"jsdoc/require-param-type": 0,
+				"no-restricted-globals": 0
+			}
+		}
+	],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "settings": {
     "import/resolver": {
       "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "paths": ["components"]
       }
-    }
+    },
+    "import/extensions": [".js", ".mjs", ".jsx", ".ts", ".tsx"]
   }
 }

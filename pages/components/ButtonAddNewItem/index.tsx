@@ -1,6 +1,6 @@
-import { useState, ChangeEvent } from "react";
-import { Button, Section, Wrapper } from "./ButtonAddNewItem.style";
-import NewItemForm from "./components/NewItemForm";
+import { useState } from 'react';
+import { Button } from './ButtonAddNewItem.style';
+import NewItemForm from './components/NewItemForm';
 
 interface ButtonAddProps {
   title: string;
