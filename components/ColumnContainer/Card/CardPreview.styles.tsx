@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react';
 import type { XYCoord } from 'react-dnd';
 import { useDragLayer } from 'react-dnd';
 import { useSelector } from 'react-redux';
-import { DndTaskType } from '../../../../interfaces';
+import { DndTaskType } from '../../../interfaces';
 import { CardTag } from './Card.styles';
 
 function getItemStyles(

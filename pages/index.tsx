@@ -1,6 +1,9 @@
 import { gql, useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import ButtonAdd from '../components/ButtonAdd';
+import ColumnContainer from '../components/ColumnContainer';
+import CardPreview from '../components/ColumnContainer/Card/CardPreview.styles';
 import useQueryActions from '../customHooks/useQueryActions';
 import { IList } from '../interfaces';
 import {
@@ -8,9 +11,6 @@ import {
   HomeContainer,
   HomeWrapper,
 } from '../styles/Home.styles';
-import ButtonAdd from './components/ButtonAdd';
-import ColumnContainer from './components/ColumnContainer';
-import CardPreview from './components/ColumnContainer/Card/CardPreview.styles';
 
 const GET_LISTS = gql`
   query GetLists {

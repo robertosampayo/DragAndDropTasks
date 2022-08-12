@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import { useDrop } from 'react-dnd';
 import { useDispatch, useSelector } from 'react-redux';
-import { MoveTaskAction } from '../../../actions/index';
-import useQueryActions from '../../../customHooks/useQueryActions';
+import { MoveTaskAction } from '../../actions/index';
+import useQueryActions from '../../customHooks/useQueryActions';
 import {
   ColumnContainerProps,
   DndTaskType,
-} from '../../../interfaces/index';
+} from '../../interfaces/index';
 import ButtonAddNewItem from '../ButtonAddNewItem';
 import Card from './Card';
 import { CardUl, Container, Title } from './ColumnContainer.styles';

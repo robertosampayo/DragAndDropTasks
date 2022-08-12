@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 import { useDispatch } from 'react-redux';
-import { MoveTaskAction } from '../../../../actions/index';
-import { DndTaskType } from '../../../../interfaces';
+import { MoveTaskAction } from '../../../actions/index';
+import { DndTaskType } from '../../../interfaces';
 import { CardTag } from './Card.styles';
 
 const Card = ({
